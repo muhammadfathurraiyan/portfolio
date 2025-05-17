@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "DM-Sans";
+  src: url("/fonts/DM-Sans.ttf");
+}
+
+@font-face {
+  font-family: "IBMPlexMono-Bold";
+  src: url("/fonts/IBMPlexMono-Bold.ttf");
+}
+
+@font-face {
+  font-family: "IBMPlexMono-SemiBold";
+  src: url("/fonts/IBMPlexMono-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "IBMPlexMono-Medium";
+  src: url("/fonts/IBMPlexMono-Medium.ttf");
+}
+
+@font-face {
+  font-family: "IBMPlexMono-Regular";
+  src: url("/fonts/IBMPlexMono-Regular.ttf");
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/fonts/IBM-Plex-Mono.ttf");
+}
+
+@theme {
+  --color-background: #1a1a1a;
+  --color-foreground: #f1f1f1;
+  --color-primary: #ff4011;
+  --color-border: #2a2a2a;
+
+  --font-DMSans: "DM-Sans";
+  --font-IBMPlexMono-Bold: "IBMPlexMono-Bold";
+  --font-IBMPlexMono-SemiBold: "IBMPlexMono-SemiBold";
+  --font-IBMPlexMono-Medium: "IBMPlexMono-Medium";
+  --font-IBMPlexMono-Regular: "IBMPlexMono-Regular";
+}
+
+@layer base {
+  html {
+    @apply text-background font-DMSans bg-foreground border-border scroll-smooth font-normal antialiased;
+  }
+
+  ::selection {
+    @apply bg-primary text-foreground;
+  }
+}
